@@ -1,0 +1,4 @@
+- Align MHD with carrow.
+- Get rid of m4
+- Get rid of automake and use CMake instead.
+- Remove win32 directory and everything about Micro$oft windows.

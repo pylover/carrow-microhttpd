@@ -55,3 +55,6 @@ src/microhttpd_ws/test_websocket
 /po/po-configure.ac
 /po/configure.ac
 *.exe.manifest
+
+# Vim
+.*.sw[op]
