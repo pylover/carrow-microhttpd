@@ -1,3 +1,5 @@
+CC=gcc
+CFLAGS=-Wall -Werror -g
 PRETTYCFLAGS = --recursive \
 	--verbose=0 \
 	--repository=. \
@@ -12,6 +14,18 @@ PRETTYCFLAGS = --recursive \
 	--exclude=libmicrohttpd.pc.in \
 	--root=. \
 	./
+
+all: build
+
+build:
+	$(CC) $(CFLAGS) carrow_microhttpd.c -o carrow_microhttpd -lmicrohttpd \
+		-lcarrow -lclog
+
+run:
+	./carrow_microhttpd
+
+clean:
+	rm ./carrow_microhttpd
 
 lint:
 	prettyc $(PRETTYCFLAGS)
